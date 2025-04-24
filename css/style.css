@@ -1372,3 +1372,12 @@ pre code {
         grid-template-columns: 1fr;
     }
 }
+
+/* Specific fix for conclusion page gap */
+.conclusion .explanation h4:last-of-type {
+    margin-bottom: 5px !important;
+}
+
+.conclusion .creation-summary {
+    margin-top: 5px !important;
+}

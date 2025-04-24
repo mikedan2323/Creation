@@ -15,15 +15,15 @@
     /* Color Palette - Creation Days */
     --color-day1-primary: var(--color-divine);     /* Light */
     --color-day2-primary: #6CA6C1;                 /* Sky/water blue */
-    --color-day3-primary: #2D5F3E;                 /* Forest green */
+    --color-day3-primary: #238143;                 /* Forest green */
     --color-day3-secondary: #8C6542;               /* Earth brown */
     --color-day4-primary: #FFD166;                 /* Sun gold */
     --color-day4-secondary: #4D7EA8;               /* Night sky blue */
     --color-day5-primary: #3D8EAE;                 /* Ocean blue */
     --color-day5-secondary: #91C7B1;               /* Wing blue-green */
-    --color-day6-primary: #A44200;                 /* Earth red */
+    --color-day6-primary: #c05107;                 /* Earth red */
     --color-day6-secondary: #916953;               /* Animal brown */
-    --color-day7-primary: #5E4275;                 /* Sabbath purple */
+    --color-day7-primary: #9261bb;                 /* Sabbath purple */
     --color-day7-secondary: #D1B1CB;               /* Lavender */
     
     /* Typography */

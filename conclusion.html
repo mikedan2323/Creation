@@ -53,19 +53,13 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: var(--spacing-md);
-            margin: var(--spacing-xs) 0;
-            /* Further reduced margin */
+            margin: 5px 0 var(--spacing-md);
         }
 
         .explanation h4:last-of-type {
             margin-top: 0;
-            margin-bottom: 0;
-            /* Fixed pixel value for precise control */
+            margin-bottom: 5px;
         }
-
-        .explanation {
-        margin-bottom: 0; /* Remove bottom margin from explanation section */
-    }
 
         .creation-day-card {
             background: rgba(255, 255, 255, 0.9);
@@ -200,7 +194,7 @@
                     <li>It reminds us of our role as stewards of God's creation.</li>
                 </ul>
 
-                <h4>The Creation Week at a Glance:</h4>
+                <h4 style="margin-bottom: 5px !important;">The Creation Week at a Glance:</h4>
             </div>
 
             <div class="creation-summary animate-fade-in animation-delay-500">
