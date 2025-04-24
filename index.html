@@ -124,6 +124,63 @@
             opacity: 0.6;
         }
         
+        /* Scroll Indicator Styles */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .scroll-indicator-text {
+            font-family: var(--font-body);
+            font-size: var(--font-size-sm);
+            color: var(--color-light);
+            opacity: 0.7;
+            margin-bottom: var(--spacing-xs);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .scroll-arrow {
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--color-divine);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            animation: pulseScroll 2s infinite;
+        }
+        
+        .scroll-arrow::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid var(--color-divine);
+            border-bottom: 2px solid var(--color-divine);
+            transform: rotate(45deg) translateY(-3px);
+        }
+        
+        @keyframes pulseScroll {
+            0% {
+                transform: translateY(0);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateY(8px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.5;
+            }
+        }
+        
         @media (max-width: 768px) {
             .group-members {
                 flex-direction: column;
@@ -132,6 +189,10 @@
             
             .member-name:not(:last-child)::after {
                 content: none;
+            }
+            
+            .scroll-indicator {
+                bottom: 20px;
             }
         }
         
@@ -246,10 +307,16 @@
                 <span class="member-name">Henry Addai</span>
             </div>
         </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator animate-fade-in animation-delay-900" onclick="document.getElementById('day-preview').scrollIntoView({ behavior: 'smooth' });">
+            <div class="scroll-indicator-text">Explore More</div>
+            <div class="scroll-arrow"></div>
+        </div>
     </section>
     
     <!-- Day Preview Section -->
-    <section class="day-preview-section">
+    <section id="day-preview" class="day-preview-section">
         <h2 class="day-preview-title animate-fade-in">The Seven Days of Creation</h2>
         
         <div class="day-preview-grid">
