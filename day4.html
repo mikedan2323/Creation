@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation Explorer - Day 4: Sun, Moon & Stars</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="day4">
+    <!-- Side Navigation -->
+    <nav class="site-nav">
+        <div class="site-nav__logo">
+            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="20" fill="#E6B655" opacity="0.8"/>
+            </svg>
+        </div>
+        
+        <div class="site-nav__days">
+            <a href="day1.html" class="day-nav-item" data-label="Day 1: Light">1</a>
+            <a href="day2.html" class="day-nav-item" data-label="Day 2: Firmament">2</a>
+            <a href="day3.html" class="day-nav-item" data-label="Day 3: Land & Plants">3</a>
+            <a href="day4.html" class="day-nav-item active" data-label="Day 4: Sun, Moon, Stars" aria-current="page">4</a>
+            <a href="day5.html" class="day-nav-item" data-label="Day 5: Sea Life & Birds">5</a>
+            <a href="day6.html" class="day-nav-item" data-label="Day 6: Land Animals & Humans">6</a>
+            <a href="day7.html" class="day-nav-item" data-label="Day 7: Sabbath">7</a>
+        </div>
+        
+        <div class="site-nav__footer">
+            <a href="index.html" title="Home">
+                <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </a>
+            <a href="belief.html" title="Fundamental Belief">
+                <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+            </a>
+            <a href="conclusion.html" title="Conclusion">
+                <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <header class="day-header">
+            <!-- Day 4 specific animation - celestial bodies moving -->
+            <div class="celestial-animation">
+                <div class="sun-moon-orbit">
+                    <div class="celestial-body sun"></div>
+                    <div class="celestial-body moon"></div>
+                </div>
+                <div class="star" style="top: 20%; left: 30%;"></div>
+                <div class="star" style="top: 40%; left: 70%;"></div>
+                <div class="star" style="top: 60%; left: 40%;"></div>
+                <!-- Add more stars as needed -->
+            </div>
+
+            <div class="day-visual">
+                <!-- Add space/stars background image -->
+            </div>
+
+            <h1 class="day-title animate-fade-up">Day 4: Sun, Moon & Stars</h1>
+            <p class="day-subtitle animate-fade-up animation-delay-300">God appoints the celestial bodies to govern time and seasons.</p>
+
+            <button id="scripture-btn" class="scripture-button animate-fade-in animation-delay-700">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                Read Genesis 1:14-19
+            </button>
+        </header>
+
+        <section class="content-section">
+            <div class="explanation animate-fade-in">
+                <h3>Understanding Day 4</h3>
+                <p>Having created light on Day 1, God now placed light-bearers in the sky: the sun to govern the day, the moon for the night, and the stars. These were ordained not just for light, but also to mark signs, seasons, days, and years, establishing cosmic order.</p>
+                
+                <ul>
+                    <li>Lights placed in the expanse created on Day 2.</li>
+                    <li>Given specific purposes: separate day/night, signs, seasons, days, years.</li>
+                    <li>Demonstrates God's intricate design and order for the universe.</li>
+                    <li>Sun and moon rule over day and night, respectively.</li>
+                </ul>
+            </div>
+
+            <div class="interactive-quiz animate-fade-in animation-delay-300">
+                <h3>Quick Check</h3>
+                <p class="question"><strong>What was one stated purpose for the sun, moon, and stars created on Day 4?</strong></p>
+
+                <form id="quiz-form">
+                    <div class="quiz-options">
+                        <div class="quiz-option">
+                            <input type="radio" id="heat" name="day4-q1" value="Heat">
+                            <label for="heat">To provide heat</label>
+                        </div>
+                        
+                        <div class="quiz-option">
+                            <input type="radio" id="navigation" name="day4-q1" value="Navigation">
+                            <label for="navigation">To guide sailors</label>
+                        </div>
+                        
+                        <div class="quiz-option">
+                            <input type="radio" id="beauty" name="day4-q1" value="Beauty">
+                            <label for="beauty">To look beautiful</label>
+                        </div>
+                        
+                        <div class="quiz-option">
+                            <input type="radio" id="time" name="day4-q1" value="Time" data-correct="true">
+                            <label for="time">To mark seasons, days, years</label>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="check-answer" class="check-answer-btn">Check Answer</button>
+                    
+                    <div id="feedback" class="feedback" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+        <div class="day-navigation">
+            <a href="day3.html" class="nav-button prev">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Previous Day: Land & Vegetation
+            </a>
+            
+            <a href="day5.html" class="nav-button next">
+                Next Day: Sea Creatures & Birds
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </a>
+        </div>
+    </main>
+
+    <!-- Scripture Modal -->
+    <div id="scripture-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-button">&times;</button>
+            
+            <div class="scripture-container">
+                <h3 class="scripture-heading">Genesis 1:14-19 (NKJV)</h3>
+                
+                <div class="scripture-text">
+                    <p><span class="verse-number">14</span>Then God said, "Let there be lights in the firmament of the heavens to divide the day from the night; and let them be for signs and seasons, and for days and years; <span class="verse-number">15</span>and let them be for lights in the firmament of the heavens to give light on the earth"; and it was so. <span class="verse-number">16</span>Then God made two great lights: the greater light to rule the day, and the lesser light to rule the night. He made the stars also. <span class="verse-number">17</span>God set them in the firmament of the heavens to give light on the earth, <span class="verse-number">18</span>and to rule over the day and over the night, and to divide the light from the darkness. And God saw that it was good. <span class="verse-number">19</span>So the evening and the morning were the fourth day.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation Explorer - Journey Through Genesis</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Landing page specific styles */
+        .landing-hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(10, 35, 66, 0.9) 0%, rgba(45, 48, 71, 0.8) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .landing-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/cosmos-background.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            z-index: 0;
+        }
+        
+        .landing-title {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-6xl);
+            color: var(--color-light);
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .landing-subtitle {
+            font-family: var(--font-body);
+            font-size: var(--font-size-xl);
+            color: var(--color-divine);
+            margin-bottom: var(--spacing-lg);
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: var(--color-divine);
+            color: var(--color-deep);
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: var(--font-size-lg);
+            text-decoration: none;
+            border-radius: var(--border-radius-lg);
+            transition: var(--transition-smooth);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-button:hover {
+            background: #f1c866;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-strong);
+        }
+        
+        .day-preview-section {
+            padding: var(--spacing-xl) 0;
+            background: var(--color-light);
+        }
+        
+        .day-preview-title {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: var(--font-size-4xl);
+            color: var(--color-deep);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .day-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        .day-preview-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .day-preview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-strong);
+        }
+        
+        .day-preview-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .day-preview-content {
+            padding: var(--spacing-md);
+        }
+        
+        .day-preview-number {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-3xl);
+            color: var(--color-divine);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .day-preview-heading {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-xl);
+            color: var(--color-deep);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .day-preview-description {
+            font-family: var(--font-body);
+            font-size: var(--font-size-base);
+            color: #666;
+        }
+        
+        .purpose-section {
+            padding: var(--spacing-xl) 0;
+            background: #f9f7f1;
+            text-align: center;
+        }
+        
+        .purpose-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        .purpose-title {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-3xl);
+            color: var(--color-deep);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .purpose-text {
+            font-family: var(--font-body);
+            font-size: var(--font-size-lg);
+            color: var(--color-deep);
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Landing Hero Section -->
+    <section class="landing-hero">
+        <h1 class="landing-title animate-fade-up">Creation Explorer</h1>
+        <p class="landing-subtitle animate-fade-up animation-delay-300">Discovering the Genesis of All Things</p>
+        <a href="day1.html" class="cta-button animate-fade-up animation-delay-500">Begin the Journey</a>
+    </section>
+    
+    <!-- Day Preview Section -->
+    <section class="day-preview-section">
+        <h2 class="day-preview-title animate-fade-in">The Seven Days of Creation</h2>
+        
+        <div class="day-preview-grid">
+            <a href="day1.html" class="day-preview-card animate-fade-up">
+                <img src="assets/images/day1-preview.jpg" alt="Day 1 - Light" class="day-preview-image">
+                <div class="day-preview-content">
+                    <div class="day-preview-number">Day 1</div>
+                    <h3 class="day-preview-heading">Let There Be Light</h3>
+                    <p class="day-preview-description">God creates light and separates it from darkness.</p>
+                </div>
+            </a>
+            
+            <a href="day2.html" class="day-preview-card animate-fade-up animation-delay-100">
+                <img src="assets/images/day2-preview.jpg" alt="Day 2 - Firmament" class="day-preview-image">
+                <div class="day-preview-content">
+                    <div class="day-preview-number">Day 2</div>
+                    <h3 class="day-preview-heading">The Firmament</h3>
+                    <p class="day-preview-description">God separates the waters above from the waters below.</p>
+                </div>
+            </a>
+            
+            <a href="day3.html" class="day-preview-card animate-fade-up animation-delay-300">
+                <img src="assets/images/day3-preview.jpg" alt="Day 3 - Land & Vegetation" class="day-preview-image">
+                <div class="day-preview-content">
+                    <div class="day-preview-number">Day 3</div>
+                    <h3 class="day-preview-heading">Land & Vegetation</h3>
+                    <p class="day-preview-description">Dry land appears and vegetation begins to grow.</p>
+                </div>
+            </a>
+            
+            <a href="day4.html" class="day-preview-card animate-fade-up animation-delay-500">
+                <img src="assets/images/day4-preview.jpg" alt="Day 4 - Sun, Moon & Stars" class="day-preview-image">
+                <div class="day-preview-content">
+                    <div class="day-preview-number">Day 4</div>
+                    <h3 class="day-preview-heading">Sun, Moon & Stars</h3>
+                    <p class="day-preview-description">Celestial bodies are placed to mark days and seasons.</p>
+                </div>
+            </a>
+            
+            <a href="day5.html" class="day-preview-card animate-fade-up animation-delay-700">
+                <img src="assets/images/day5-preview.jpg" alt="Day 5 - Sea Life & Birds" class="day-preview-image">
+                <div class="day-preview-content">
+                    <div class="day-preview-number">Day 5</div>
+                    <h3 class="day-preview-heading">Sea Life & Birds</h3>
+                    <p class="day-preview-description">The waters and skies are filled with living creatures.</p>
+                </div>
+            </a>
+            
+            <a href="day6.html" class="day-preview-card animate-fade-up animation-delay-900">
+                <img src="assets/images/day6-preview.jpg" alt="Day 6 - Animals & Humans" class="day-preview-image">
+                <div class="day-preview-content">
+                    <div class="day-preview-number">Day 6</div>
+                    <h3 class="day-preview-heading">Animals & Humans</h3>
+                    <p class="day-preview-description">Land animals and humanity are created in God's image.</p>
+                </div>
+            </a>
+            
+            <a href="day7.html" class="day-preview-card animate-fade-up animation-delay-1100">
+                <img src="assets/images/day7-preview.jpg" alt="Day 7 - Sabbath Rest" class="day-preview-image">
+                <div class="day-preview-content">
+                    <div class="day-preview-number">Day 7</div>
+                    <h3 class="day-preview-heading">Sabbath Rest</h3>
+                    <p class="day-preview-description">God sanctifies the seventh day as a day of rest.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Purpose Section -->
+    <section class="purpose-section">
+        <div class="purpose-content">
+            <h2 class="purpose-title animate-fade-in">Explore the Wonder of Creation</h2>
+            <p class="purpose-text animate-fade-in animation-delay-300">
+                Creation Explorer presents the Seventh-day Adventist understanding of the Genesis creation account through an interactive and educational journey. Discover the majesty and significance of each creative act as you explore the foundational belief in God as Creator.
+            </p>
+        </div>
+    </section>
+    
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>

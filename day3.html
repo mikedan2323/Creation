@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation Explorer - Day 3: Land & Vegetation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="day3">
+    <!-- Side Navigation -->
+    <nav class="site-nav">
+        <div class="site-nav__logo">
+            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="20" fill="#E6B655" opacity="0.8"/>
+            </svg>
+        </div>
+        
+        <div class="site-nav__days">
+            <a href="day1.html" class="day-nav-item" data-label="Day 1: Light">1</a>
+            <a href="day2.html" class="day-nav-item" data-label="Day 2: Firmament">2</a>
+            <a href="day3.html" class="day-nav-item active" data-label="Day 3: Land & Plants" aria-current="page">3</a>
+            <a href="day4.html" class="day-nav-item" data-label="Day 4: Sun, Moon, Stars">4</a>
+            <a href="day5.html" class="day-nav-item" data-label="Day 5: Sea Life & Birds">5</a>
+            <a href="day6.html" class="day-nav-item" data-label="Day 6: Land Animals & Humans">6</a>
+            <a href="day7.html" class="day-nav-item" data-label="Day 7: Sabbath">7</a>
+        </div>
+        
+        <div class="site-nav__footer">
+            <a href="index.html" title="Home">
+                <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </a>
+            <a href="belief.html" title="Fundamental Belief">
+                <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+            </a>
+            <a href="conclusion.html" title="Conclusion">
+                <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <header class="day-header">
+            <!-- Day 3 specific animation - growing plants -->
+            <div class="plant-growth-animation">
+                <div class="plant"></div>
+                <div class="plant"></div>
+                <div class="plant"></div>
+                <div class="plant"></div>
+                <div class="plant"></div>
+            </div>
+
+            <div class="day-visual">
+                <!-- Add land/plant background image -->
+            </div>
+
+            <h1 class="day-title animate-fade-up">Day 3: Dry Land & Vegetation</h1>
+            <p class="day-subtitle animate-fade-up animation-delay-300">Life springs forth as God commands the earth to produce plants.</p>
+
+            <button id="scripture-btn" class="scripture-button animate-fade-in animation-delay-700">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                Read Genesis 1:9-13
+            </button>
+        </header>
+
+        <section class="content-section">
+            <div class="explanation animate-fade-in">
+                <h3>Understanding Day 3</h3>
+                <p>God gathered the waters to reveal dry land, naming them Earth and Seas. Then, He commanded the land to burgeon with vegetation: seed-bearing plants and fruit trees, establishing the foundation of the food chain and Earth's ecosystems.</p>
+                
+                <ul>
+                    <li>Formation of continents and oceans.</li>
+                    <li>God commands the earth to <em>bring forth</em> life.</li>
+                    <li>Creation of diverse plant life with seeds for reproduction.</li>
+                    <li>God declares this work "good".</li>
+                </ul>
+            </div>
+
+            <div class="interactive-quiz animate-fade-in animation-delay-300">
+                <h3>Quick Check</h3>
+                <p class="question"><strong>Besides dry land and seas, what LIVING things did God create on Day 3?</strong></p>
+
+                <form id="quiz-form">
+                    <div class="quiz-options">
+                        <div class="quiz-option">
+                            <input type="radio" id="fish" name="day3-q1" value="Fish">
+                            <label for="fish">Fish</label>
+                        </div>
+                        
+                        <div class="quiz-option">
+                            <input type="radio" id="birds" name="day3-q1" value="Birds">
+                            <label for="birds">Birds</label>
+                        </div>
+                        
+                        <div class="quiz-option">
+                            <input type="radio" id="plants" name="day3-q1" value="Plants" data-correct="true">
+                            <label for="plants">Vegetation / Plants</label>
+                        </div>
+                        
+                        <div class="quiz-option">
+                            <input type="radio" id="animals" name="day3-q1" value="Animals">
+                            <label for="animals">Land Animals</label>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="check-answer" class="check-answer-btn">Check Answer</button>
+                    
+                    <div id="feedback" class="feedback" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+        <div class="day-navigation">
+            <a href="day2.html" class="nav-button prev">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Previous Day: The Firmament
+            </a>
+            
+            <a href="day4.html" class="nav-button next">
+                Next Day: Sun, Moon & Stars
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </a>
+        </div>
+    </main>
+
+    <!-- Scripture Modal -->
+    <div id="scripture-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-button">&times;</button>
+            
+            <div class="scripture-container">
+                <h3 class="scripture-heading">Genesis 1:9-13 (NKJV)</h3>
+                
+                <div class="scripture-text">
+                    <p><span class="verse-number">9</span>Then God said, "Let the waters under the heavens be gathered together into one place, and let the dry land appear"; and it was so. <span class="verse-number">10</span>And God called the dry land Earth, and the gathering together of the waters He called Seas. And God saw that it was good.</p>
+                    
+                    <p><span class="verse-number">11</span>Then God said, "Let the earth bring forth grass, the herb that yields seed, and the fruit tree that yields fruit according to its kind, whose seed is in itself, on the earth"; and it was so. <span class="verse-number">12</span>And the earth brought forth grass, the herb that yields seed according to its kind, and the tree that yields fruit, whose seed is in itself according to its kind. And God saw that it was good. <span class="verse-number">13</span>So the evening and the morning were the third day.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>

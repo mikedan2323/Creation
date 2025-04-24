@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation Explorer - Fundamental Belief #6</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Belief page specific styles */
+        body.belief {
+            --day-primary: var(--color-divine);
+            --day-secondary: var(--color-deep);
+            --day-gradient-start: var(--color-deep);
+            --day-gradient-end: var(--color-divine);
+        }
+        
+        .belief-statement {
+            background: rgba(255, 255, 255, 0.95);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            margin: var(--spacing-lg) 0;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .belief-title {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-3xl);
+            color: var(--color-divine);
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .belief-text {
+            font-family: var(--font-scripture);
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+            color: var(--color-deep);
+            text-align: justify;
+        }
+        
+        .scripture-reference {
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-sm);
+            background: rgba(230, 182, 85, 0.1);
+            border-left: 4px solid var(--color-divine);
+            font-family: var(--font-scripture);
+            font-style: italic;
+        }
+        
+        .supporting-texts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .text-card {
+            background: white;
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .text-card h4 {
+            color: var(--color-divine);
+            margin-bottom: var(--spacing-xs);
+        }
+    </style>
+</head>
+<body class="belief">
+    <!-- ... [Navigation remains the same] ... -->
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <header class="day-header">
+            <div class="day-visual">
+                <!-- Add creation-themed background -->
+            </div>
+
+            <h1 class="day-title animate-fade-up">Fundamental Belief #6</h1>
+            <p class="day-subtitle animate-fade-up animation-delay-300">Creation</p>
+        </header>
+
+        <section class="content-section">
+            <div class="belief-statement animate-fade-in">
+                <h2 class="belief-title">The Seventh-day Adventist Understanding of Creation</h2>
+                
+                <p class="belief-text">God has revealed in Scripture the authentic and historical account of His creative activity. He created the universe, and in a recent six-day creation the Lord made "the heavens and the earth, the sea, and all that is in them" and rested on the seventh day. Thus He established the Sabbath as a perpetual memorial of the work He performed and completed during six literal days that together with the Sabbath constituted the same unit of time that we call a week today. The first man and woman were made in the image of God as the crowning work of Creation, given dominion over the world, and charged with responsibility to care for it. When the world was finished it was "very good," declaring the glory of God.</p>
+                
+                <div class="scripture-reference">
+                    <p><strong>Supporting Scriptures:</strong> Genesis 1-2; 5; 11; Exodus 20:8-11; Psalm 19:1-6; 33:6, 9; 104; Isaiah 45:12, 18; Acts 17:24; Colossians 1:16; Hebrews 1:2; 11:3; Revelation 10:6; 14:7.</p>
+                </div>
+            </div>
+
+            <div class="supporting-texts animate-fade-in animation-delay-300">
+                <div class="text-card">
+                    <h4>Genesis 1:1</h4>
+                    <p>"In the beginning God created the heavens and the earth."</p>
+                </div>
+                
+                <div class="text-card">
+                    <h4>Exodus 20:11</h4>
+                    <p>"For in six days the Lord made the heavens and the earth, the sea, and all that is in them, and rested the seventh day. Therefore the Lord blessed the Sabbath day and hallowed it."</p>
+                </div>
+                
+                <div class="text-card">
+                    <h4>Psalm 33:6</h4>
+                    <p>"By the word of the Lord the heavens were made, and all the host of them by the breath of His mouth."</p>
+                </div>
+                
+                <div class="text-card">
+                    <h4>Revelation 14:7</h4>
+                    <p>"Fear God and give glory to Him, for the hour of His judgment has come; and worship Him who made heaven and earth, the sea and springs of water."</p>
+                </div>
+            </div>
+
+            <div class="explanation animate-fade-in animation-delay-500">
+                <h3>Key Aspects of This Belief</h3>
+                <ul>
+                    <li><strong>Historical Reality:</strong> The creation account is understood as literal history, not myth or allegory.</li>
+                    <li><strong>Recent Creation:</strong> The earth was created recently, not billions of years ago.</li>
+                    <li><strong>Six Literal Days:</strong> Creation occurred in six consecutive 24-hour days.</li>
+                    <li><strong>Sabbath Memorial:</strong> The seventh day Sabbath was established as a perpetual reminder of creation.</li>
+                    <li><strong>Divine Image:</strong> Humans were created in God's image with free will and moral responsibility.</li>
+                    <li><strong>Perfect Beginning:</strong> The original creation was "very good" - perfect and without death.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="day-navigation">
+            <a href="conclusion.html" class="nav-button prev">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                Back to Conclusion
+            </a>
+            
+            <a href="index.html" class="nav-button next">
+                Start Journey Again
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </a>
+        </div>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>

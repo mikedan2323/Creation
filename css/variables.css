@@ -1,0 +1,125 @@
+/*
+  Creation Explorer - CSS Variables
+  Contains all design tokens: colors, typography, spacing, effects
+*/
+
+:root {
+    /* Color Palette - Core */
+    --color-void: #0A2342;           /* Deep dark blue - void/cosmos */
+    --color-deep: #0E1C36;           /* Slightly lighter dark blue */
+    --color-divine: #E6B655;         /* Gold - divine light */
+    --color-light: #F7F9FB;          /* Off-white - light */
+    --color-night: #2D3047;          /* Night blue */
+    --color-day: #B8DBD9;            /* Light blue-green - day */
+    
+    /* Color Palette - Creation Days */
+    --color-day1-primary: var(--color-divine);     /* Light */
+    --color-day2-primary: #6CA6C1;                 /* Sky/water blue */
+    --color-day3-primary: #2D5F3E;                 /* Forest green */
+    --color-day3-secondary: #8C6542;               /* Earth brown */
+    --color-day4-primary: #FFD166;                 /* Sun gold */
+    --color-day4-secondary: #4D7EA8;               /* Night sky blue */
+    --color-day5-primary: #3D8EAE;                 /* Ocean blue */
+    --color-day5-secondary: #91C7B1;               /* Wing blue-green */
+    --color-day6-primary: #A44200;                 /* Earth red */
+    --color-day6-secondary: #916953;               /* Animal brown */
+    --color-day7-primary: #5E4275;                 /* Sabbath purple */
+    --color-day7-secondary: #D1B1CB;               /* Lavender */
+    
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Raleway', sans-serif;
+    --font-scripture: 'Cormorant Garamond', serif;
+    
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;     /* 12px */
+    --font-size-sm: 0.875rem;    /* 14px */
+    --font-size-base: 1rem;      /* 16px */
+    --font-size-md: 1.125rem;    /* 18px */
+    --font-size-lg: 1.25rem;     /* 20px */
+    --font-size-xl: 1.5rem;      /* 24px */
+    --font-size-2xl: 1.75rem;    /* 28px */
+    --font-size-3xl: 2rem;       /* 32px */
+    --font-size-4xl: 2.5rem;     /* 40px */
+    --font-size-5xl: 3rem;       /* 48px */
+    --font-size-6xl: 4rem;       /* 64px */
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;      /* 8px */
+    --spacing-sm: 1rem;        /* 16px */
+    --spacing-md: 2rem;        /* 32px */
+    --spacing-lg: 4rem;        /* 64px */
+    --spacing-xl: 8rem;        /* 128px */
+    
+    /* Effects */
+    --shadow-soft: 0 10px 30px rgba(10, 35, 66, 0.1);
+    --shadow-medium: 0 10px 30px rgba(10, 35, 66, 0.2);
+    --shadow-strong: 0 10px 30px rgba(10, 35, 66, 0.3);
+    --transition-fast: all 0.2s ease-out;
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    /* Borders */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-circle: 50%;
+
+    /* Z-Index Layers */
+    --z-index-base: 1;
+    --z-index-above: 10;
+    --z-index-navigation: 100;
+    --z-index-modal: 1000;
+    --z-index-popup: 2000;
+}
+
+/* Day-specific variables - can be applied by adding the day's class to the body */
+body.day1 {
+    --day-primary: var(--color-day1-primary);
+    --day-secondary: var(--color-divine);
+    --day-gradient-start: var(--color-night);
+    --day-gradient-end: var(--color-day);
+}
+
+body.day2 {
+    --day-primary: var(--color-day2-primary);
+    --day-secondary: #91C7B1;
+    --day-gradient-start: #0A2342;
+    --day-gradient-end: #6CA6C1;
+}
+
+body.day3 {
+    --day-primary: var(--color-day3-primary);
+    --day-secondary: var(--color-day3-secondary);
+    --day-gradient-start: #6CA6C1;
+    --day-gradient-end: #2D5F3E;
+}
+
+body.day4 {
+    --day-primary: var(--color-day4-primary);
+    --day-secondary: var(--color-day4-secondary);
+    --day-gradient-start: var(--color-deep);
+    --day-gradient-end: var(--color-day4-primary);
+}
+
+body.day5 {
+    --day-primary: var(--color-day5-primary);
+    --day-secondary: var(--color-day5-secondary);
+    --day-gradient-start: var(--color-day5-primary);
+    --day-gradient-end: var(--color-day5-secondary);
+}
+
+body.day6 {
+    --day-primary: var(--color-day6-primary);
+    --day-secondary: var(--color-day6-secondary);
+    --day-gradient-start: #A44200;
+    --day-gradient-end: #E5B181;
+}
+
+body.day7 {
+    --day-primary: var(--color-day7-primary);
+    --day-secondary: var(--color-day7-secondary);
+    --day-gradient-start: #2D3047;
+    --day-gradient-end: #5E4275;
+}

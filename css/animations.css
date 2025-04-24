@@ -1,0 +1,459 @@
+/*
+  Creation Explorer - Animations
+  Contains all keyframe animations and animation utilities
+*/
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Fade Up Animation (fade in while moving up) */
+@keyframes fadeUp {
+    0% { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* Delayed animations */
+.animation-delay-100 {
+    animation-delay: 0.1s;
+}
+
+.animation-delay-300 {
+    animation-delay: 0.3s;
+}
+
+.animation-delay-500 {
+    animation-delay: 0.5s;
+}
+
+.animation-delay-700 {
+    animation-delay: 0.7s;
+}
+
+.animation-delay-900 {
+    animation-delay: 0.9s;
+}
+
+/* Float Animation for particles */
+@keyframes float {
+    0% { transform: translate(0, 0); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translate(var(--float-x, 20px), var(--float-y, -20px)); opacity: 0; }
+}
+
+.animate-float {
+    animation: float var(--float-duration, 5s) infinite ease-in-out;
+}
+
+/* Light Ray Animation */
+@keyframes lightRayAnimation {
+    0% {
+        transform: rotate(-20deg) translateY(-100%);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.2;
+    }
+    100% {
+        transform: rotate(20deg) translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.animate-light-ray {
+    animation: lightRayAnimation 15s infinite ease-in-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-rotate {
+    animation: rotate 20s linear infinite;
+}
+
+/* Day-specific animations */
+
+/* Day 1: Light particle animation */
+.light-particle {
+    position: absolute;
+    background-color: rgba(230, 182, 85, 0.7);
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+/* Day 2: Water wave animation */
+/* Enhanced Wave Animation */
+@keyframes wave {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+/* Alternative wave animation with more movement */
+@keyframes waveMotion {
+    0% {
+        transform: translateX(-50px) translateY(0) scaleY(1);
+    }
+    25% {
+        transform: translateX(0) translateY(-5px) scaleY(1.05);
+    }
+    50% {
+        transform: translateX(50px) translateY(0) scaleY(1);
+    }
+    75% {
+        transform: translateX(0) translateY(5px) scaleY(0.95);
+    }
+    100% {
+        transform: translateX(-50px) translateY(0) scaleY(1);
+    }
+}
+
+.animate-wave {
+    animation: wave 8s linear infinite;
+}
+
+/* Add this class for a more dynamic wave effect */
+.animate-wave-motion {
+    animation: waveMotion 12s ease-in-out infinite;
+}
+
+/* Day 3: Growing plant animation */
+.plant-growth-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.plant {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 0;
+    background: linear-gradient(to top, #2D5F3E, #4a8b5f);
+    transform-origin: bottom center;
+    animation: grow 5s infinite;
+}
+
+.plant:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.plant:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.plant:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.plant:nth-child(4) {
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.plant:nth-child(5) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes grow {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+        height: 150px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+/* Day 4: Celestial bodies animation */
+.celestial-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.sun-moon-orbit {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 20s linear infinite;
+}
+
+.celestial-body {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.sun {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at center, #FFD166, #FFA500);
+    box-shadow: 0 0 30px rgba(255, 209, 102, 0.7);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.moon {
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle at 30% 30%, white, #ccc);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+/* Day 5: Sea life and birds animation */
+.life-in-motion-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.fish {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(to right, #3D8EAE, #6CA6C1);
+    border-radius: 50% 20% 20% 50%;
+    animation: swim 15s linear infinite;
+}
+
+.fish:nth-child(odd) {
+    animation-direction: reverse;
+}
+
+.bird {
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    background: transparent;
+    animation: fly 10s linear infinite;
+}
+
+.bird::before,
+.bird::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 3px;
+    background: #333;
+    transform-origin: right center;
+}
+
+.bird::before {
+    left: 0;
+    transform: rotate(-10deg);
+    animation: flap 0.5s infinite alternate;
+}
+
+.bird::after {
+    right: 0;
+    transform: rotate(10deg);
+    animation: flap 0.5s infinite alternate-reverse;
+}
+
+@keyframes flap {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes swim {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(calc(100% + 100px));
+    }
+}
+
+/* Day 6: Land animals and human silhouette animation */
+.pinnacle-of-creation-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.human-silhouette {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 160px;
+    background: linear-gradient(to top, rgba(164, 66, 0, 0.7), rgba(164, 66, 0, 0.4));
+    border-radius: 40px 40px 0 0;
+    animation: breathe 5s infinite ease-in-out;
+}
+
+.animal {
+    position: absolute;
+    bottom: 10%;
+    width: 40px;
+    height: 40px;
+    background: rgba(140, 101, 66, 0.6);
+    border-radius: 50% 50% 0 0;
+    animation: graze 10s infinite ease-in-out;
+}
+
+.animal:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.animal:nth-child(3) {
+    left: 70%;
+    animation-delay: 4s;
+}
+
+@keyframes graze {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Day 7: Sabbath rest animation */
+.sabbath-peace-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.rest-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(209, 177, 203, 0.5);
+    border-radius: 50%;
+    animation: ripple 4s infinite ease-out;
+}
+
+.rest-ripple:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.rest-ripple:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes ripple {
+    0% {
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
+}
