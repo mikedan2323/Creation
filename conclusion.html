@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,15 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <style>
         /* Conclusion page specific styles */
         body.conclusion {
@@ -23,7 +26,7 @@
             --day-gradient-start: var(--color-deep);
             --day-gradient-end: var(--color-day7-secondary);
         }
-        
+
         .conclusion-verse {
             text-align: center;
             margin: var(--spacing-xl) 0;
@@ -31,28 +34,35 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: var(--border-radius-lg);
         }
-        
+
         .conclusion-verse h2 {
             font-family: var(--font-scripture);
             font-size: var(--font-size-4xl);
             color: var(--color-divine);
             margin-bottom: var(--spacing-md);
         }
-        
+
         .verse-reference {
             font-family: var(--font-body);
             font-size: var(--font-size-lg);
             color: var(--color-light);
             margin-top: var(--spacing-sm);
         }
-        
+
         .creation-summary {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: var(--spacing-md);
-            margin: var(--spacing-lg) 0;
+            margin: var(--spacing-xs) 0;
+            /* Further reduced margin */
         }
-        
+
+        .explanation h4:last-of-type {
+            margin-top: 0;
+            margin-bottom: 10px;
+            /* Fixed pixel value for precise control */
+        }
+
         .creation-day-card {
             background: rgba(255, 255, 255, 0.9);
             padding: var(--spacing-sm);
@@ -60,35 +70,35 @@
             text-align: center;
             transition: var(--transition-smooth);
         }
-        
+
         .creation-day-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-strong);
         }
-        
+
         .creation-day-link {
             text-decoration: none;
             color: inherit;
         }
-        
+
         .creation-day-number {
             font-family: var(--font-heading);
             font-size: var(--font-size-2xl);
             color: var(--color-divine);
         }
-        
+
         .creation-day-title {
             font-family: var(--font-body);
             font-size: var(--font-size-base);
             color: var(--color-deep);
             margin-top: var(--spacing-xs);
         }
-        
+
         .call-to-action {
             text-align: center;
             margin-top: var(--spacing-xl);
         }
-        
+
         .cta-button {
             display: inline-block;
             padding: var(--spacing-sm) var(--spacing-lg);
@@ -101,7 +111,7 @@
             border-radius: var(--border-radius-lg);
             transition: var(--transition-smooth);
         }
-        
+
         .cta-button:hover {
             background: #f1c866;
             transform: translateY(-3px);
@@ -109,15 +119,16 @@
         }
     </style>
 </head>
+
 <body class="conclusion">
     <!-- Side Navigation -->
     <nav class="site-nav">
         <div class="site-nav__logo">
             <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="25" cy="25" r="20" fill="#E6B655" opacity="0.8"/>
+                <circle cx="25" cy="25" r="20" fill="#E6B655" opacity="0.8" />
             </svg>
         </div>
-        
+
         <div class="site-nav__days">
             <a href="day1.html" class="day-nav-item" data-label="Day 1: Light">1</a>
             <a href="day2.html" class="day-nav-item" data-label="Day 2: Firmament">2</a>
@@ -127,7 +138,7 @@
             <a href="day6.html" class="day-nav-item" data-label="Day 6: Land Animals & Humans">6</a>
             <a href="day7.html" class="day-nav-item" data-label="Day 7: Sabbath">7</a>
         </div>
-        
+
         <div class="site-nav__footer">
             <a href="index.html" title="Home">
                 <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +153,9 @@
             </a>
             <a href="conclusion.html" title="Conclusion" class="active" aria-current="page">
                 <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
                 </svg>
             </a>
         </div>
@@ -156,24 +169,29 @@
             </div>
 
             <h1 class="day-title animate-fade-up">Called to Worship the Creator</h1>
-            <p class="day-subtitle animate-fade-up animation-delay-300">The eternal significance of Creation in our lives</p>
+            <p class="day-subtitle animate-fade-up animation-delay-300">The eternal significance of Creation in our
+                lives</p>
         </header>
 
         <section class="content-section">
             <div class="conclusion-verse animate-fade-in">
-                <h2>"Fear God and give glory to Him, for the hour of His judgment has come; and worship Him who made heaven and earth, the sea and springs of water."</h2>
+                <h2>"Fear God and give glory to Him, for the hour of His judgment has come; and worship Him who made
+                    heaven and earth, the sea and springs of water."</h2>
                 <p class="verse-reference">- Revelation 14:7 (NKJV)</p>
             </div>
 
             <div class="explanation animate-fade-in animation-delay-300">
                 <h3>Creation's Enduring Message</h3>
-                <p>From the beginning of time to the end of earth's history, God's creative power remains the foundation of our faith and worship. The seven-day creation account is not merely ancient history, but a living testimony to God's character and His ongoing relationship with humanity.</p>
-                
+                <p>From the beginning of time to the end of earth's history, God's creative power remains the foundation
+                    of our faith and worship. The seven-day creation account is not merely ancient history, but a living
+                    testimony to God's character and His ongoing relationship with humanity.</p>
+
                 <h4>Why Creation Matters Today:</h4>
                 <ul>
                     <li>It reveals God as our personal, powerful Creator who formed us in His image.</li>
                     <li>It establishes the Sabbath as a perpetual memorial of God's creative work.</li>
-                    <li>It provides the foundation for understanding redemption - the same God who created can re-create.</li>
+                    <li>It provides the foundation for understanding redemption - the same God who created can
+                        re-create.</li>
                     <li>It calls us to worship the Creator in this final era of earth's history (Rev. 14:7).</li>
                     <li>It reminds us of our role as stewards of God's creation.</li>
                 </ul>
@@ -228,11 +246,14 @@
 
             <div class="explanation animate-fade-in animation-delay-700">
                 <h3>A Living Memorial</h3>
-                <p>The Sabbath stands as a weekly reminder of creation week, linking us back to Eden and forward to the earth made new. Each Sabbath is an invitation to rest in God's completed work and celebrate His creative power.</p>
-                
+                <p>The Sabbath stands as a weekly reminder of creation week, linking us back to Eden and forward to the
+                    earth made new. Each Sabbath is an invitation to rest in God's completed work and celebrate His
+                    creative power.</p>
+
                 <div class="call-to-action">
                     <a href="belief.html" class="cta-button">Explore Fundamental Belief #6</a>
-                    <p style="margin-top: var(--spacing-md); font-style: italic;">Learn more about the Seventh-day Adventist understanding of Creation</p>
+                    <p style="margin-top: var(--spacing-md); font-style: italic;">Learn more about the Seventh-day
+                        Adventist understanding of Creation</p>
                 </div>
             </div>
         </section>
@@ -244,7 +265,7 @@
                 </svg>
                 Previous: The Sabbath Rest
             </a>
-            
+
             <a href="index.html" class="nav-button next">
                 Start Journey Again
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -258,12 +279,16 @@
     <div id="scripture-modal" class="modal">
         <div class="modal-content">
             <button id="close-modal" class="close-button">&times;</button>
-            
+
             <div class="scripture-container">
                 <h3 class="scripture-heading">Revelation 14:6-7 (NKJV)</h3>
-                
+
                 <div class="scripture-text">
-                    <p><span class="verse-number">6</span>Then I saw another angel flying in the midst of heaven, having the everlasting gospel to preach to those who dwell on the earth—to every nation, tribe, tongue, and people— <span class="verse-number">7</span>saying with a loud voice, "Fear God and give glory to Him, for the hour of His judgment has come; and worship Him who made heaven and earth, the sea and springs of water."</p>
+                    <p><span class="verse-number">6</span>Then I saw another angel flying in the midst of heaven, having
+                        the everlasting gospel to preach to those who dwell on the earth—to every nation, tribe, tongue,
+                        and people— <span class="verse-number">7</span>saying with a loud voice, "Fear God and give
+                        glory to Him, for the hour of His judgment has come; and worship Him who made heaven and earth,
+                        the sea and springs of water."</p>
                 </div>
             </div>
         </div>
@@ -274,4 +299,5 @@
     <script src="js/navigation.js"></script>
     <script src="js/interactions.js"></script>
 </body>
+
 </html>

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creation Explorer - Journey Through Genesis</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <style>
         /* Landing page specific styles */
         .landing-hero {
@@ -28,7 +31,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .landing-hero::before {
             content: '';
             position: absolute;
@@ -42,7 +45,7 @@
             opacity: 0.5;
             z-index: 0;
         }
-        
+
         .landing-title {
             font-family: var(--font-heading);
             font-size: var(--font-size-6xl);
@@ -51,7 +54,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .landing-subtitle {
             font-family: var(--font-body);
             font-size: var(--font-size-xl);
@@ -61,7 +64,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .cta-button {
             display: inline-block;
             padding: var(--spacing-sm) var(--spacing-lg);
@@ -76,13 +79,13 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .cta-button:hover {
             background: #f1c866;
             transform: translateY(-3px);
             box-shadow: var(--shadow-strong);
         }
-        
+
         /* Credits Section Styles */
         .credits-section {
             position: relative;
@@ -90,7 +93,7 @@
             margin-top: var(--spacing-xl);
             opacity: 0.9;
         }
-        
+
         .group-name {
             font-family: var(--font-heading);
             font-size: var(--font-size-2xl);
@@ -99,7 +102,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        
+
         .group-members {
             display: flex;
             justify-content: center;
@@ -107,7 +110,7 @@
             flex-wrap: wrap;
             margin-top: var(--spacing-sm);
         }
-        
+
         .member-name {
             font-family: var(--font-body);
             font-size: var(--font-size-base);
@@ -115,7 +118,7 @@
             position: relative;
             padding: 0 var(--spacing-sm);
         }
-        
+
         .member-name:not(:last-child)::after {
             content: '•';
             position: absolute;
@@ -123,7 +126,7 @@
             color: var(--color-divine);
             opacity: 0.6;
         }
-        
+
         /* Scroll Indicator Styles */
         .scroll-indicator {
             position: absolute;
@@ -134,7 +137,7 @@
             cursor: pointer;
             text-align: center;
         }
-        
+
         .scroll-indicator-text {
             font-family: var(--font-body);
             font-size: var(--font-size-sm);
@@ -144,63 +147,64 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .scroll-arrow {
-            width: 30px;
-            height: 30px;
-            border: 2px solid var(--color-divine);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 20px;
+            height: 20px;
             margin: 0 auto;
+            position: relative;
             animation: pulseScroll 2s infinite;
         }
-        
+
         .scroll-arrow::after {
             content: '';
-            width: 8px;
-            height: 8px;
-            border-right: 2px solid var(--color-divine);
-            border-bottom: 2px solid var(--color-divine);
-            transform: rotate(45deg) translateY(-3px);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 14px;
+            height: 14px;
+            border-right: 3px solid var(--color-divine);
+            border-bottom: 3px solid var(--color-divine);
+            transform: translateX(-50%) rotate(45deg);
         }
-        
+
         @keyframes pulseScroll {
             0% {
                 transform: translateY(0);
                 opacity: 0.5;
             }
+
             50% {
                 transform: translateY(8px);
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(0);
                 opacity: 0.5;
             }
         }
-        
+
         @media (max-width: 768px) {
             .group-members {
                 flex-direction: column;
                 gap: var(--spacing-xs);
             }
-            
+
             .member-name:not(:last-child)::after {
                 content: none;
             }
-            
+
             .scroll-indicator {
                 bottom: 20px;
             }
         }
-        
+
         .day-preview-section {
             padding: var(--spacing-xl) 0;
             background: var(--color-light);
         }
-        
+
         .day-preview-title {
             text-align: center;
             font-family: var(--font-heading);
@@ -208,7 +212,7 @@
             color: var(--color-deep);
             margin-bottom: var(--spacing-lg);
         }
-        
+
         .day-preview-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -217,7 +221,7 @@
             margin: 0 auto;
             padding: 0 var(--spacing-md);
         }
-        
+
         .day-preview-card {
             background: white;
             border-radius: var(--border-radius-lg);
@@ -227,40 +231,41 @@
             text-decoration: none;
             color: inherit;
         }
-        
+
         .day-preview-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-strong);
         }
-        
+
         .day-preview-image {
             width: 100%;
             height: 180px;
             object-fit: cover;
         }
-        
+
         .day-preview-content {
             padding: var(--spacing-md);
         }
-        
+
         .day-preview-number {
             font-family: var(--font-heading);
             font-size: var(--font-size-3xl);
             color: var(--color-divine);
             margin-bottom: var(--spacing-xs);
         }
-        
+
         .day-preview-heading {
             font-family: var(--font-heading);
             font-size: var(--font-size-xl);
             color: var(--color-deep);
             margin-bottom: var(--spacing-xs);
         }
-        
+
         .day-preview-description {
             font-family: var(--font-body);
             font-size: var(--font-size-base);
-            color: #666;
+            color: #333 !important;
+            /* Force the color change */
         }
         
         .purpose-section {
@@ -268,20 +273,20 @@
             background: #f9f7f1;
             text-align: center;
         }
-        
+
         .purpose-content {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 var(--spacing-md);
         }
-        
+
         .purpose-title {
             font-family: var(--font-heading);
             font-size: var(--font-size-3xl);
             color: var(--color-deep);
             margin-bottom: var(--spacing-md);
         }
-        
+
         .purpose-text {
             font-family: var(--font-body);
             font-size: var(--font-size-lg);
@@ -290,13 +295,14 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Landing Hero Section -->
     <section class="landing-hero">
         <h1 class="landing-title animate-fade-up">Creation Explorer</h1>
         <p class="landing-subtitle animate-fade-up animation-delay-300">Discovering the Genesis of All Things</p>
         <a href="day1.html" class="cta-button animate-fade-up animation-delay-500">Begin the Journey</a>
-        
+
         <!-- Credits Section -->
         <div class="credits-section animate-fade-up animation-delay-700">
             <div class="group-name">Tribe of Ruben</div>
@@ -307,18 +313,19 @@
                 <span class="member-name">Henry Addai</span>
             </div>
         </div>
-        
+
         <!-- Scroll Indicator -->
-        <div class="scroll-indicator animate-fade-in animation-delay-900" onclick="document.getElementById('day-preview').scrollIntoView({ behavior: 'smooth' });">
+        <div class="scroll-indicator animate-fade-in animation-delay-900"
+            onclick="document.getElementById('day-preview').scrollIntoView({ behavior: 'smooth' });">
             <div class="scroll-indicator-text">Explore More</div>
             <div class="scroll-arrow"></div>
         </div>
     </section>
-    
+
     <!-- Day Preview Section -->
     <section id="day-preview" class="day-preview-section">
         <h2 class="day-preview-title animate-fade-in">The Seven Days of Creation</h2>
-        
+
         <div class="day-preview-grid">
             <a href="day1.html" class="day-preview-card animate-fade-up">
                 <img src="assets/images/day1-preview.jpg" alt="Day 1 - Light" class="day-preview-image">
@@ -328,7 +335,7 @@
                     <p class="day-preview-description">God creates light and separates it from darkness.</p>
                 </div>
             </a>
-            
+
             <a href="day2.html" class="day-preview-card animate-fade-up animation-delay-100">
                 <img src="assets/images/day2-preview.jpg" alt="Day 2 - Firmament" class="day-preview-image">
                 <div class="day-preview-content">
@@ -337,7 +344,7 @@
                     <p class="day-preview-description">God separates the waters above from the waters below.</p>
                 </div>
             </a>
-            
+
             <a href="day3.html" class="day-preview-card animate-fade-up animation-delay-300">
                 <img src="assets/images/day3-preview.jpg" alt="Day 3 - Land & Vegetation" class="day-preview-image">
                 <div class="day-preview-content">
@@ -346,7 +353,7 @@
                     <p class="day-preview-description">Dry land appears and vegetation begins to grow.</p>
                 </div>
             </a>
-            
+
             <a href="day4.html" class="day-preview-card animate-fade-up animation-delay-500">
                 <img src="assets/images/day4-preview.jpg" alt="Day 4 - Sun, Moon & Stars" class="day-preview-image">
                 <div class="day-preview-content">
@@ -355,7 +362,7 @@
                     <p class="day-preview-description">Celestial bodies are placed to mark days and seasons.</p>
                 </div>
             </a>
-            
+
             <a href="day5.html" class="day-preview-card animate-fade-up animation-delay-700">
                 <img src="assets/images/day5-preview.jpg" alt="Day 5 - Sea Life & Birds" class="day-preview-image">
                 <div class="day-preview-content">
@@ -364,7 +371,7 @@
                     <p class="day-preview-description">The waters and skies are filled with living creatures.</p>
                 </div>
             </a>
-            
+
             <a href="day6.html" class="day-preview-card animate-fade-up animation-delay-900">
                 <img src="assets/images/day6-preview.jpg" alt="Day 6 - Animals & Humans" class="day-preview-image">
                 <div class="day-preview-content">
@@ -373,7 +380,7 @@
                     <p class="day-preview-description">Land animals and humanity are created in God's image.</p>
                 </div>
             </a>
-            
+
             <a href="day7.html" class="day-preview-card animate-fade-up animation-delay-1100">
                 <img src="assets/images/day7-preview.jpg" alt="Day 7 - Sabbath Rest" class="day-preview-image">
                 <div class="day-preview-content">
@@ -384,20 +391,23 @@
             </a>
         </div>
     </section>
-    
+
     <!-- Purpose Section -->
     <section class="purpose-section">
         <div class="purpose-content">
             <h2 class="purpose-title animate-fade-in">Explore the Wonder of Creation</h2>
             <p class="purpose-text animate-fade-in animation-delay-300">
-                Creation Explorer presents the Seventh-day Adventist understanding of the Genesis creation account through an interactive and educational journey. Discover the majesty and significance of each creative act as you explore the foundational belief in God as Creator.
+                Creation Explorer presents the Seventh-day Adventist understanding of the Genesis creation account
+                through an interactive and educational journey. Discover the majesty and significance of each creative
+                act as you explore the foundational belief in God as Creator.
             </p>
         </div>
     </section>
-    
+
     <!-- JavaScript Files -->
     <script src="js/main.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/interactions.js"></script>
 </body>
+
 </html>
