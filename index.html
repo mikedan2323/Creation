@@ -83,6 +83,58 @@
             box-shadow: var(--shadow-strong);
         }
         
+        /* Credits Section Styles */
+        .credits-section {
+            position: relative;
+            z-index: 1;
+            margin-top: var(--spacing-xl);
+            opacity: 0.9;
+        }
+        
+        .group-name {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-2xl);
+            color: var(--color-divine);
+            margin-bottom: var(--spacing-xs);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .group-members {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-sm);
+        }
+        
+        .member-name {
+            font-family: var(--font-body);
+            font-size: var(--font-size-base);
+            color: var(--color-light);
+            position: relative;
+            padding: 0 var(--spacing-sm);
+        }
+        
+        .member-name:not(:last-child)::after {
+            content: '•';
+            position: absolute;
+            right: calc(var(--spacing-md) * -0.5);
+            color: var(--color-divine);
+            opacity: 0.6;
+        }
+        
+        @media (max-width: 768px) {
+            .group-members {
+                flex-direction: column;
+                gap: var(--spacing-xs);
+            }
+            
+            .member-name:not(:last-child)::after {
+                content: none;
+            }
+        }
+        
         .day-preview-section {
             padding: var(--spacing-xl) 0;
             background: var(--color-light);
@@ -183,6 +235,17 @@
         <h1 class="landing-title animate-fade-up">Creation Explorer</h1>
         <p class="landing-subtitle animate-fade-up animation-delay-300">Discovering the Genesis of All Things</p>
         <a href="day1.html" class="cta-button animate-fade-up animation-delay-500">Begin the Journey</a>
+        
+        <!-- Credits Section -->
+        <div class="credits-section animate-fade-up animation-delay-700">
+            <div class="group-name">Tribe of Ruben</div>
+            <div class="group-members">
+                <span class="member-name">Michael Danso</span>
+                <span class="member-name">Angelina Bimpeh</span>
+                <span class="member-name">Patience Oduro</span>
+                <span class="member-name">Henry Addai</span>
+            </div>
+        </div>
     </section>
     
     <!-- Day Preview Section -->
